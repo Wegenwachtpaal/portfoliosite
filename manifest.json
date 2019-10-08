@@ -1,0 +1,52 @@
+{
+    "name": "Portfolio Rick Verwaal",
+    "short_name": "Portfolio",
+    "theme_color": "#141626",
+    "background_color": "#bf037d",
+    "display": "standalone",
+    "Scope": "",
+    "start_url": "https://i394051.hera.fhict.nl/index.html",
+    "icons": [
+      {
+        "src": "main/assests/Icons/icon-72x72.png",
+        "sizes": "72x72",
+        "type": "image/png"
+      },
+      {
+        "src": "main/assests/Icons/icon-96x96.png",
+        "sizes": "96x96",
+        "type": "image/png"
+      },
+      {
+        "src": "main/assests/Icons/icon-128x128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      },
+      {
+        "src": "assests/Icons/icon-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      },
+      {
+        "src": "/assests/Icons/icon-152x152.png",
+        "sizes": "152x152",
+        "type": "image/png"
+      },
+      {
+        "src": "/assests/Icons/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/assests/Icons/icon-384x384.png",
+        "sizes": "384x384",
+        "type": "image/png"
+      },
+      {
+        "src": "/assests/Icons/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "splash_pages": null
+  }

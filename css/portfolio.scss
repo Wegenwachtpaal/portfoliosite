@@ -1,0 +1,675 @@
+/* Kleurtjes */
+$Porto-2-1-hex: #72024b;
+$Porto-2-2-hex: #bf037d;
+$Porto-2-3-hex: #141626;
+$Porto-2-4-hex: #343249;
+$Porto-2-5-hex: #ebf0ff;
+$TekstWit: #ffffff;
+$FancyBlauw: #0652dd;
+$FancyRood: #ed4c67;
+
+/* Fonts */
+@font-face {
+  font-family: "Helvetica Now Display Bold";
+  src: url("/assests/Fonts/HelveticaNowDisplay-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Helvetica Now Display Light";
+  src: url("/assests/Fonts/HelveticaNowDisplay-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Helvetica Now Display";
+  src: url("/assests/Fonts/HelveticaNowDisplay-Regular.otf");
+}
+
+@font-face {
+  font-family: "Helvetica Now Text Medium";
+  src: url("/assests/Fonts/HelveticaNowText-Medium.otf");
+}
+
+@font-face {
+  font-family: "Helvetica Now Text Light";
+  src: url("/assests/Fonts/HelveticaNowText-Light.otf");
+}
+
+/* Zwaart geschut (Globaal) */
+body {
+  background-image: url("/assests/SVG/Asset\ 2.svg");
+  background-repeat:no-repeat;
+  background-color: $Porto-2-5-hex;
+  margin: 0 auto;
+  font-size: 100%;
+}
+
+#pp {
+  background-image: none;
+  background-color: $Porto-2-5-hex;
+  margin: 0 auto;
+  font-size: 100%;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 130vh;
+  margin: 0 7vw 10px 7vw;
+  grid-row-gap: 20px;
+}
+#burger {
+  position: fixed;
+  right: 2.5vw;
+  top: 2.5vh;
+  fill: $TekstWit;
+  cursor: pointer;
+  z-index: 2;
+}
+#step2 {
+  opacity: 0;
+}
+#burger.scroll {
+  fill: $FancyRood;
+}
+#burger:hover {
+  transition: .7ms ease-in-out;
+}
+.divider {
+  font-family: "Helvetica Now Text Light";
+  font-weight: 100;
+  font-size: 1rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  z-index: 1;
+  position: absolute;
+  right: 2.5vw;
+  height: 100px;
+}
+.button {
+  background-color: $TekstWit;
+  border: none;
+  color: $Porto-2-3-hex;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  margin-top: 4vh;
+  font-size: 1.5rem;
+  font-family: "Helvetica Now Display";
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 $FancyRood;
+  transition:  0.5s ease-out;
+}
+.button:hover {
+  box-shadow: inset 0 100px 0 0 $FancyRood;
+  color: $TekstWit;
+}
+.copyconfirm {
+  font-family: "Helvetica Now Text Light";
+  font-size: 1rem;
+  top: 0px;
+  opacity: 0;
+  transition: top 1s ease-in-out;
+  display:flex;
+}
+a:link {
+  color: $Porto-2-3-hex;
+  text-decoration: none;
+}
+a:visited {
+  color: $Porto-2-3-hex;
+}
+a:hover {
+  color: $FancyRood;
+  cursor: hover;
+}
+
+
+/* Extensions */
+%previewcontainer {  
+  margin: 0 auto;
+  color: $Porto-2-3-hex;
+  .container {
+    grid-template-rows: 15vh 1fr 1fr 1fr 1fr;
+  }
+  h1 {
+    @extend %titels;
+  }
+  .opener {
+    @extend %opener;
+  }
+  .summary {
+    @extend %summary;
+  }
+  .thumbnail {
+    @extend %thumbnail;
+    background-image: url('/assests/piccas/blake-wisz-1554907-unsplash.jpg');
+    background-size:cover;
+    transition: .5s ease-in-out;
+    opacity: 1;
+  }
+  .thumbnail:hover {
+    opacity: 0.5;
+  }
+}
+%titels { 
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  align-self: end;
+  font-family: "Helvetica Now Display Bold";
+  font-size: 2rem;
+  font-weight: 100;
+  margin:0;
+}
+%opener {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  h2 {
+    font-family: "Helvetica Now Text Medium";
+    font-size: 1.5rem;
+    margin: 0 auto;
+    font-weight: 100;
+  }
+  h3 {
+    font-family: "Helvetica Now Text Light";
+    font-size: 1rem;
+    margin: 0 auto;
+    font-weight: 100;
+  }
+  h4 {
+    font-family: "Helvetica Now Text Light";
+    font-size: 1.5rem;
+    margin: 0 auto;
+    font-weight: 100;
+  }
+}
+%summary {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  p {
+    font-family: "Helvetica Now Text Light";
+    font-size: 1rem;
+    margin: 0 auto;
+    font-weight: 100;
+  }
+  h2 {
+    font-family: "Helvetica Now Text Medium";
+    font-size: 1.5rem;
+    margin: 0 auto;
+    font-weight: 100;
+  }
+}
+%thumbnail {
+  grid-row-start: 3;
+  grid-row-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+/* Home page */
+/* Landing */
+#landing {
+  color: $TekstWit;
+  margin: 0 auto;
+  .container {
+    height: 100vh;
+    margin-bottom: 0;
+  }
+  #title {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    h1 {
+      font-family: "Helvetica Now Display Bold";
+      font-size: 3rem;
+      margin: 0 auto;
+      font-weight: 100;
+    }
+    h2 {
+      font-family: "Helvetica Now Display Light";
+      font-size: 2rem;
+      margin: 0 auto;
+      font-weight: 100;
+    }
+  }
+}
+
+.lijntje {
+  width: 1px;
+  background: $Porto-2-5-hex;
+  grid-row-start:3;
+  grid-row-end:4;
+  grid-column-start:1;
+  grid-column-end:1;
+  z-index: 1;
+  opacity: 0.2;
+}
+.rietje {
+  width: 1px;
+  height:5vh;
+  background: $Porto-2-5-hex;
+  grid-row-start:3;
+  grid-row-end:4;
+  grid-column-start:1;
+  grid-column-end:1;
+  opacity: 0.5;
+  z-index: 2;
+  animation-name: slide;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-delay:0;
+  animation-iteration-count: infinite;
+  animation-play-state: running; 
+  animation-fill-mode: forwards;
+}
+@keyframes slide {
+  0% {
+    margin-top:0;
+  }
+  100% {
+    margin-top:25vh;
+  }
+}
+/* About me */
+#aboutme {
+  //background-color: $FancyRood;
+  margin: 0 auto;
+  color: $TekstWit;
+  height: 100vh;
+  .container {
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  h1 {
+    @extend %titels;   
+  }
+  .opener {
+    @extend %opener;
+  }
+  .summary {
+    @extend %summary;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    padding-left: 50px;
+  }
+  .thumbnail {
+    @extend %thumbnail;
+  }
+}
+/* Previews */
+#preview1 {
+  @extend %previewcontainer;
+}
+#preview2 {
+  @extend %previewcontainer;
+}
+
+
+/* Footer */
+#footer {
+  background-color: $Porto-2-3-hex;
+  color: $TekstWit;
+  margin: 0;
+  .container {
+    height: 100vh;
+    margin: 5vh 7vw 0vh 7vw;
+  }
+  h1 {
+    font-family: "Helvetica Now Display Bold";
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 100;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    align-self: center;
+  }
+  .summary {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    p {
+      font-family: "Helvetica Now Text Light";
+      font-size: 1rem;
+      margin: 0 auto;
+      font-weight: 100;
+    }
+    h2 {
+      font-family: "Helvetica Now Text Light";
+      font-size: 1.5rem;
+      margin: 0 auto;
+      font-weight: 100;
+    }
+  }
+  #contact {
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-self: start;
+  }
+}
+ 
+.myspace a{
+  fill: $TekstWit;
+  margin-right:10px;
+}
+
+.myspace a:hover {
+  fill:$FancyRood;
+}
+body > svg:last-child {
+  display:none;
+}
+
+/* Project Page */
+#projectlanding {
+  background-color: $FancyBlauw;
+  height: 130vh;
+  #projectimg {
+    margin: 0 7vw 0 7vw;
+    padding-top: 10vh;
+    img {
+      width: 100%;
+      height: 75%;
+    }
+  }
+}
+#hs1 {
+  background-color: $FancyBlauw;
+  margin: 0 auto;
+  color: $TekstWit;
+  height: 40vh;
+  .container {
+    grid-template-rows: 10vh 1fr 10vh;
+  }
+  h1 {
+    @extend %titels;   
+  }
+  .opener {
+    @extend %opener;
+  }
+  .summary {
+    @extend %summary;
+  }
+  .thumbnail {
+    @extend %thumbnail;
+  }
+}
+#hs2 {
+  .container {
+    grid-template-rows: 15vh 1fr 1fr 1fr 1fr;
+  }
+  h1 {
+    @extend %titels;
+  }
+  .summary {
+    @extend %summary;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+/* The Overlay (background) */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 5;
+  right: 0;
+  top: 0;
+  background-color: $Porto-2-3-hex;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+#xd {
+  h1 {
+    font-family: "Helvetica Now Display Bold";
+    font-size: 3rem;
+    margin: 7vh auto;
+    font-weight: 100;
+  }
+  #Tier1 {
+    h2 {
+      font-family: "Helvetica Now Display Bold";
+      font-size: 2rem;
+      margin: 0 auto;
+      font-weight: 100;
+    }
+    h3 {
+      font-family: "Helvetica Now Text Light";
+      font-size: 1.5rem;
+      margin: 0 auto;
+      font-weight: 100;
+    }
+  }
+  .Tier2 {
+    h2 {
+      font-family: "Helvetica Now Display Bold";
+      font-size: 1.5rem;
+      margin: 0 auto;
+      font-weight: 100;
+    }
+    h3 {
+      font-family: "Helvetica Now Text Light";
+      font-size: 1rem;
+      margin: 0 auto;
+      font-weight: 100;
+    }
+  }
+}
+/* Position the content inside the overlay */
+.overlay-open {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: 95%;
+  color: $TekstWit;
+
+  opacity: 0;
+  animation: fadeIn 0.5s;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.overlay-closed {
+  opacity: 0;
+}
+/* The navigation links inside the overlay */
+.overlay a {
+  text-decoration: none;
+  color: $TekstWit;
+  display: block;
+  transition: 0.3s;
+  margin: 2vh 0;
+}
+.overlay a:hover,
+.overlay a:focus {
+  color: $FancyRood;
+  fill: $FancyRood;
+}
+.overlay .closebtn {
+  position: absolute;
+  right: 2.5vw;
+  top: 2.5vh;
+  fill: $TekstWit;
+  margin: 0;
+}
+/* Mobile */
+@media only screen and  (max-width: 1079px)  {
+  body {
+    background-image: none;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 100vh;
+    margin: 0 7vw 0 7vw;
+    
+  }
+  %opener {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    margin-left: 0;
+    br {
+      display:none;
+    }
+  }
+  %summary {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    align-content: end;
+  }
+  %thumbnail {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    img {
+      height: 75%;
+      width: 100%;
+    }
+  }
+
+  /* Landing */
+  #landing {
+    background: rgb(20, 22, 38);
+    background: linear-gradient(170deg, #0652dd 0%, #ed4c67 100%);
+    .container {
+      height: 100vh;
+    }
+    #title {
+      grid-row-start: 2;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      margin-top: -3vh;
+    }
+  }
+  .lijntje {
+    display:none;
+  }
+  .rietje {
+    display:none;
+  }
+
+  #aboutme {
+    background-color: $FancyRood;
+    height: 50vh;
+    .container {
+      height: 50vh;
+    }
+    .summary {
+      grid-row-start: 2;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 5;
+      padding-left:0;
+    }
+  }
+  #preview1 {
+    .container {
+      grid-template-rows: 15vh 15vh 1fr 1fr 1fr;
+    }
+    .summary {
+      display:none;
+    }
+  }
+  #preview2 {
+    .container {
+      grid-template-rows: 15vh 15vh 1fr 1fr 1fr;
+    }
+    .summary {
+      display:none;
+    }
+  }
+  /* footer */
+  #footer {
+    .container {
+      height: 100vh;
+      margin: 5vh 7vw 0vh 7vw;
+    }
+    h1 {
+      grid-row-start: 1;
+      grid-row-end: 1;
+      grid-column-start: 1;
+      grid-column-end: 5;
+      align-self: center;
+    }
+    .summary {
+      grid-row-start: 2;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+    #contact {
+      grid-row-start: 3;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 5;
+      align-self: start;
+    }
+  }
+  #xd {
+    flex-wrap:wrap;
+    flex-direction:column;
+    justify-content: center;
+    align-content: center;
+    h1 {
+      font-size: 2rem;
+      margin-bottom:0;
+    }
+    #Tier1 {
+      h2 {
+        font-size: 1.5rem;
+      }
+      h3 {
+        font-size: 1rem;
+      }
+    }
+    .Tier2 {
+      h2 {
+        font-size: 1.5rem;
+      }
+      h3 {
+        font-size: 1rem;
+      }
+    }
+    .button {
+      font-size: 1rem;
+    }
+  }
+  #projectlanding {
+    height:40vh;
+  }
+  #hs1 {
+    height:70vh;
+    .container {
+      grid-template-rows: 1fr 1fr 1fr;
+      height: 60vh;
+    }
+  }
+}
+
+

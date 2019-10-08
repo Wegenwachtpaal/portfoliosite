@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <title>Portfolio Rick Verwaal</title>
+  <link type="text/css" rel="stylesheet" href="css/portfolio.css" media="screen,projection" />
+  <link rel="manifest" href="manifest.json">
+  <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.9.0/d3.min.js"></script>
+  <script src="Snap.svg-0.5.1/dist/snap.svg-min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name=" theme-color" content="#141626" />
+  <meta name="Description" content="De ziekste waanzinnigste drug die je ooit heb gehad.">
+  <meta charset="UTF-8">
+</head>
+<body>
+  <!-- The overlay -->
+  <div id="myNav" class="overlay">
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path
+          d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+      </svg>
+    </a>
+    <div id="xd" class="overlay-closed">
+      <div id="Tier1">
+        <h1> De "wow" factor.</h1>
+        <a href="runmotivation.html">
+          <h2>Running Motivation</h2>
+          <h3>Design a solution which helps starting gym-goers 
+          </br>with setting up routines.</h3>
+        </a>
+        <a href="projectemplate.html">
+          <h2>WeEat</h2>
+          <h3>Design an app which enables lonely students </br>to eat together.</h3>
+        </a>
+      </div>
+      <div class="Tier2">
+        <h1> De broodkruimels.</h1>
+        <a href="">
+          <h2>Smart Mobile Industry Project</h2>
+          <h3>Binnenkort in de bioscoop.</h3>
+        </a>
+        <a href="projectemplate.html">
+          <h2>RK9Labs Redesign</h2>
+          <h3>Binnenkort in de bioscoop.</h3>
+        </a>
+      </div>
+      <div class="Tier2">
+        <a href="index.html">
+          <h1>Ik</h1>
+        </a>
+        <div class="postduif">
+            <button type="button" onclick="copy()" class="button" title="Dit kopieert mijn e-mail.">Stuur een
+              postduif.</button>
+            <span class="copyconfirm">Je hebt mijn e-mail gekopieerd. 🕊️</span>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- Use any element to open/show the overlay navigation menu -->
+  <div id="burger" onclick="openNav()">
+    <svg id="gek" width="33" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+      <path id="step1" d="M24,6H0V2H24Zm0,4H0v4H24Zm0,8H0v4H24Z" />
+      <path id="step2" d="M30,6H6V2H30Zm-6,4H0v4H24Zm9.67,8h-24v4h24Z" /></svg>
+  </div>
+  <section id="landing">
+    <div class="container">
+      <div id="title">
+        <h1>Hoi, Ik ben Rick.</h1>
+        <h2>Student ICT & Media Design.</h2>
+        <!-- E-mail copy knop -->
+        <div class="postduif">
+          <input type="hidden" value="verwaalrick@gmail.com" id="myInput">
+          <button type="button" onclick="copy()" class="button" title="Dit kopieert mijn e-mail.">Stuur een
+            postduif.</button>
+          <span class="copyconfirm">Je hebt mijn e-mail gekopieerd. 🕊️</span>
+        </div>
+      </div>
+      <!-- Scroll down animatie-->
+      <div class="lijntje"></div>
+      <div class="rietje"></div>
+    </div>
+  </section>
+  <section id="aboutme">
+    <div class="container">
+      <div class="summary">
+        <p>Nog even kort voorafgaand de tentoonstelling:
+          Ik ben dus Rick Verwaal, geboren op 1997 in Rotterdam en op dit moment wonend in Eindhoven.
+          Je zou me kunnen omschrijven als avontuurlijk, zorgvuldig en eigenzinning en dit uit ik graag in mijn
+          projecten. UX Design is iets wat mij de laatste maanden steeds meer in blijven plakken.
+          Vooral het manipuleren van gebruikers hun ervaring is iets waar ik me graag in verdiep. Voor de rest doe ik nog wat web development
+          ik zit tenslotte nog steeds op een ICT opleiding.
+        </p>
+      </div>
+    </div>
+  </section>
+  <p class="divider">het boeiende</p>
+  <section id="preview1">
+    <div class="container">
+      <h1><a href=runmotivation.html> Running Motivation</a></h1>
+      <div class="opener">
+        <h2>Design a solution which helps starting gym-goers with setting up routines.</h2>
+        </br>
+        <h3>Running Vitality Lab</h3>
+        <h3>UX Design - Najaar 2019</h3>
+      </div>
+      <div class="summary">
+        <p>Er is een hoge drop-out rate onder startende sporters. Er zijn meerdere touch-points nodig om gemotiveerd te
+          blijven. Hoe kunnen we dit realiseren? </p>
+        </br>
+        <p>Running Motivation is een langlopend project tijdens het 4e semester waarbij we van start-to-finish een
+          oplossing moeten bedenken via de IDEO-methodiek.
+        </p>
+      </div>
+      <div class="thumbnail">
+      </div>
+    </div>
+  </section>
+  <section id="preview2">
+    <div class="container">
+      <h1>WeEat</h1>
+      <div class="opener">
+        <h2>Design an app which enables lonely students </br>to eat together. </h2>
+        </br>
+        <h3>Duo project</h3>
+        <h3>UI Design / Front-End Dev - Oktober + November 2019</h3>
+      </div>
+      <div class="summary">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        </p>
+      </div>
+      <div class="thumbnail">
+      </div>
+    </div>
+  </section>
+  <section id="footer">
+    <div class="container">
+      <h1 title="Goh wat kut.">Je bent uitgescrolld!</h1>
+      <div class="summary">
+        <h2>Geen zorgen, hiernaast komen ooit nog projecten. 👉
+        </br> Als je zo verslaafd ben aan mijn projecten kan je me nog altijd mailen of PM'en op een mijn social media kanalen.
+        </h2>
+      </br>
+      </div>
+      <div id="contact">
+          <div class="myspace">
+              <a href="https://www.linkedin.com/in/rick-verwaal-630774194/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg></a>
+              <a href="https://git.fhict.nl/I394051"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M23.548 10.931l-10.479-10.478c-.302-.302-.698-.453-1.093-.453-.396 0-.791.151-1.093.453l-2.176 2.176 2.76 2.76c.642-.216 1.377-.071 1.889.44.513.515.658 1.256.435 1.9l2.66 2.66c.644-.222 1.387-.078 1.901.437.718.718.718 1.881 0 2.6-.719.719-1.883.719-2.602 0-.54-.541-.674-1.334-.4-2l-2.481-2.481v6.529c.175.087.34.202.487.348.717.717.717 1.881 0 2.601-.719.718-1.884.718-2.601 0-.719-.72-.719-1.884 0-2.601.177-.178.383-.312.602-.402v-6.589c-.219-.089-.425-.223-.602-.401-.544-.544-.676-1.343-.396-2.011l-2.721-2.721-7.185 7.185c-.302.302-.453.697-.453 1.093 0 .395.151.791.453 1.093l10.479 10.478c.302.302.697.452 1.092.452.396 0 .791-.15 1.093-.452l10.431-10.428c.302-.303.452-.699.452-1.094 0-.396-.15-.791-.452-1.093"/></svg></a>
+            </div>
+        <div class="postduif">
+          <button type="button" onclick="copy()" class="button" title="Dit kopieert mijn e-mail.">Stuur een
+            postduif.</button>
+          <span class="copyconfirm">Je hebt mijn e-mail gekopieerd. 🕊️</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+<script src="scripts/scripts.js">
+</script>
+</html>

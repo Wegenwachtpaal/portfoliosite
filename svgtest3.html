@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+</head>
+<style>
+    #step2 {
+        opacity: 0;
+    }
+    #step3 {
+        opacity: 0;
+    }
+</style>
+
+<body>
+    <svg id="gek" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="600" width="1024">
+        <defs>
+          <rect id="rect-1" opacity="1" x="364" y="262" width="296" height="76"/>
+          <rect id="rect-2" opacity="1" x="482" y="124" width="62" height="76"/>
+        </defs>
+        <g>
+          <g opacity="1">
+            <use xlink:href="#rect-1" fill="rgb(0,0,0)" fill-opacity="1"/>
+          </g>
+          <g opacity="0">
+            <use xlink:href="#rect-2" fill="rgb(255,51,102)" fill-opacity="1"/>
+          </g>
+        </g>
+      </svg>
+</body>
+<script>
+    var svg = document.getElementById("gek");
+    var s = Snap(svg);
+    var burger = Snap.select('#step1');
+    var hover = Snap.select('#step2');
+    var cross = Snap.select("#step3");
+    var simpleCupPoints = burger.node.getAttribute('d');
+    var fancyCupPoints = hover.node.getAttribute('d');
+    var nogmeerPoints = cross.node.getAttribute('d');
+    var toFancy = function () {
+        burger.animate({ d: fancyCupPoints }, 5000, mina.easeinout, toSimple);
+    }
+    var toSimple = function () {
+        burger.animate({ d: simpleCupPoints }, 5000, mina.easeinout, toDood);
+    }
+    var toDood = function () {
+        burger.animate({ d: nogmeerPoints}, 5000, mina.easeinout, toFancy)
+    }
+    toDood();
+</script>
+</html>
