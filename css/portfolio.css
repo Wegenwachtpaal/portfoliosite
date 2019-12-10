@@ -161,7 +161,8 @@ a:hover {
   cursor: hover;
 }
 
-/* Extensions */
+/* Extensions 
+    Container voor de home landing pagina */
 #preview1, #preview2 {
   margin: 0 auto;
   color: #141626;
@@ -186,6 +187,7 @@ a:hover {
   cursor: pointer;
 }
 
+/* Extension voor de kopteksten */
 #preview1 h1, #preview2 h1, #aboutme h1, #hs1 h1, #hs2 h1, #hs3 h1, #hs3 h3, #hs4 h1, #hs4 h3, #hs5 h1, #hs5 h3, #hs6 h1, #hs6 h3, #hs7 h1, #hs7 h3 {
   -ms-grid-row: 1;
       grid-row-start: 1;
@@ -201,6 +203,7 @@ a:hover {
   margin: 0;
 }
 
+/* Extension voor introductie teksten zoals te zien op de homepagina of als introductie tot een project */
 #preview1 .opener, #preview2 .opener, #aboutme .opener, #hs1 .opener {
   -ms-grid-row: 2;
       grid-row-start: 2;
@@ -231,6 +234,7 @@ a:hover {
   font-weight: 100;
 }
 
+/* Verdere samenvatting tekst op de homepagina */
 #preview1 .summary, #preview2 .summary, #aboutme .summary, #hs1 .summary, #hs2 .summary, #hs3 .summary, #hs4 .summary, #hs5 .summary, #hs6 .summary, #hs7 .summary {
   -ms-grid-row: 2;
       grid-row-start: 2;
@@ -247,6 +251,7 @@ a:hover {
   font-weight: 100;
 }
 
+/* Plaats voor de grote thumbnail op de homepagina */
 #preview1 .thumbnail, #preview2 .thumbnail, #aboutme .thumbnail, #hs1 .thumbnail {
   -ms-grid-row: 3;
       grid-row-start: 3;
@@ -257,7 +262,7 @@ a:hover {
 }
 
 /* Home page */
-/* Landing */
+/* Landingpagina */
 #landing {
   color: #ffffff;
   margin: 0 auto;
@@ -302,6 +307,7 @@ a:hover {
       align-self: end;
 }
 
+/* Animatie voor het lijntje dat naar beneden gaat*/
 .lijntje {
   width: 1px;
   background: #ebf0ff;
@@ -383,7 +389,7 @@ a:hover {
   padding-left: 50px;
 }
 
-/* Previews */
+/* Previews op de homepagina */
 #preview1 .thumbnail {
   background-image: url("/assests/piccas/tas-met-extra-vinger-en-stijl.jpg");
 }
@@ -501,6 +507,7 @@ a:hover {
   font-weight: 100;
 }
 
+/* Social media*/
 .myspace {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -533,6 +540,7 @@ body > svg:last-child {
 }
 
 /* Project Page */
+/* Extensie voor elke afbeelding op project paginas*/
 .sideimg figure, .bottomimg figure {
   height: 100%;
   max-width: 75%;
@@ -959,7 +967,7 @@ body > svg:last-child {
   font-weight: 100;
 }
 
-/* Position the content inside the overlay */
+/* Positioneer de content in de overlay */
 .overlay-open {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1003,7 +1011,7 @@ body > svg:last-child {
   opacity: 0;
 }
 
-/* The navigation links inside the overlay */
+/* De navigatie links in de overlay */
 .overlay a {
   text-decoration: none;
   color: #ffffff;
@@ -1031,7 +1039,7 @@ body > svg:last-child {
   margin-right: 10px;
 }
 
-/* Loading Screen */
+/* Laad scherm */
 #loader {
   height: 100%;
   width: 100%;
@@ -1118,7 +1126,7 @@ body > svg:last-child {
   }
 }
 
-/* Mobile */
+/* Media query tijd */
 @media only screen and (max-width: 1279px) {
   body {
     background-image: none;

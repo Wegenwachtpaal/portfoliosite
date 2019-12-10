@@ -27,6 +27,7 @@ $FancyRood: #ed4c67;
 }
 
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap");
+
 /* Zwaart geschut (Globaal) */
 body {
   background-image: url("/assests/SVG/Asset\ 2.svg");
@@ -137,7 +138,8 @@ a:hover {
   cursor: hover;
 }
 
-/* Extensions */
+/* Extensions 
+    Container voor de home landing pagina */
 %previewcontainer {
   margin: 0 auto;
   color: $Porto-2-3-hex;
@@ -166,6 +168,7 @@ a:hover {
     cursor: pointer;
   }
 }
+/* Extension voor de kopteksten */ 
 %titels {
   grid-row-start: 1;
   grid-row-end: 1;
@@ -176,6 +179,7 @@ a:hover {
   font-weight: 100;
   margin: 0;
 }
+/* Extension voor introductie teksten zoals te zien op de homepagina of als introductie tot een project */
 %opener {
   grid-row-start: 2;
   grid-row-end: 3;
@@ -201,6 +205,7 @@ a:hover {
     font-weight: 100;
   }
 }
+/* Verdere samenvatting tekst op de homepagina */
 %summary {
   grid-row-start: 2;
   grid-row-end: 3;
@@ -213,6 +218,7 @@ a:hover {
     font-weight: 100;
   }
 }
+/* Plaats voor de grote thumbnail op de homepagina */
 %thumbnail {
   grid-row-start: 3;
   grid-row-end: 6;
@@ -220,7 +226,7 @@ a:hover {
   grid-column-end: 5;
 }
 /* Home page */
-/* Landing */
+/* Landingpagina */
 #landing {
   color: $TekstWit;
   margin: 0 auto;
@@ -253,7 +259,7 @@ a:hover {
     align-self: end;
   }
 }
-
+/* Animatie voor het lijntje dat naar beneden gaat*/
 .lijntje {
   width: 1px;
   background: $Porto-2-5-hex;
@@ -317,7 +323,7 @@ a:hover {
     @extend %thumbnail;
   }
 }
-/* Previews */
+/* Previews op de homepagina */
 #preview1 {
   @extend %previewcontainer;
   .thumbnail {
@@ -408,6 +414,7 @@ a:hover {
   font-size: 1.5rem;
   font-weight: 100;
 }
+/* Social media*/
 .myspace {
   display: flex;
   h2 { 
@@ -434,6 +441,7 @@ body > svg:last-child {
 }
 
 /* Project Page */
+/* Extensie voor elke afbeelding op project paginas*/
 %ppimg {
   figure {
     height: 100%;
@@ -751,7 +759,7 @@ body > svg:last-child {
     }
   }
 }
-/* Position the content inside the overlay */
+/* Positioneer de content in de overlay */
 .overlay-open {
   display: flex;
   justify-content: space-around;
@@ -777,7 +785,7 @@ body > svg:last-child {
 .overlay-closed {
   opacity: 0;
 }
-/* The navigation links inside the overlay */
+/* De navigatie links in de overlay */
 .overlay a {
   text-decoration: none;
   color: $TekstWit;
@@ -800,7 +808,7 @@ body > svg:last-child {
 .overlay .myspace a {
   margin-right: 10px;
 }
-/* Loading Screen */
+/* Laad scherm */
 #loader {
   height: 100%;
   width: 100%;
@@ -859,7 +867,7 @@ body > svg:last-child {
   }
 }
 
-/* Mobile */
+/* Media query tijd */
 @media only screen and (max-width: 1279px) {
   body {
     background-image: none;

@@ -12,7 +12,7 @@ if ("serviceWorker" in navigator) {
   //The registration of the service worker failed
   console.log("Browser: I don't support Service Workers :(");
 }
-
+/* Nep laadscherm (Voorlopig nog) */
 setTimeout(function(loading){
   var laadscherm = document.getElementById("loader");
   laadscherm.style.width = 0;
@@ -22,7 +22,7 @@ setTimeout(function(loading){
   document.body.classList.remove("stop-scrolling"); 
 },2000)
 
-/* Menu shizzle */
+/* Open het hamburger menu */
 function openNav() {
   document.getElementById("myNav").style.width = "100%";
   var element = document.getElementById("xd");
@@ -30,7 +30,7 @@ function openNav() {
   element.classList.toggle("overlay-open");
 }
 
-/* Close when someone clicks on the "x" symbol inside the overlay */
+/* Sluit het hamburger menu */
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
   var element = document.getElementById("xd");
@@ -38,7 +38,7 @@ function closeNav() {
   element.classList.toggle("overlay-closed");
 }
 
-/* Hamburgah */
+/* Hamburger animatie */
 var intViewportHeight = window.innerHeight;
 var intWebsiteHeight = document.body.clientHeight;
 window.onscroll = () => {
@@ -48,6 +48,9 @@ window.onscroll = () => {
   else { nav.className = 'scroll'; }
 };
 
+/* Hover effect op de hamburger menu knop
+    Met behulp van jQuery en snap.svg.
+*/ 
 $(document).ready(function () {
   var svg = document.getElementById("geks");
   var s = Snap(svg);
@@ -63,7 +66,7 @@ $(document).ready(function () {
     });
 });
 
-/* Duifmeneer */
+/* "Stuur een postduif" E-mail kopieer knop */
 function copy() {
   var henk = navigator.clipboard.writeText("verwaalrick@gmail.com");
   var tooltip = document.getElementsByClassName("copyconfirm");
