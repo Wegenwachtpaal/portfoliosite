@@ -12,29 +12,15 @@ if ("serviceWorker" in navigator) {
   //The registration of the service worker failed
   console.log("Browser: I don't support Service Workers :(");
 }
-//Asking for permission with the Notification API
-if (typeof Notification !== typeof undefined) { //First check if the API is available in the browser
-  Notification.requestPermission().then(function (result) {
-    //If accepted, then save subscriberinfo in database
-    if (result === "granted") {
-      console.log("Browser: User accepted receiving notifications, save as subscriber data!");
-      navigator.serviceWorker.ready.then(function (serviceworker) { //When the Service Worker is ready, generate the subscription with our Serice Worker's pushManager and save it to our list
-        const VAPIDPublicKey = "BM8wFLc9CZMHQ3ztzyARv_zXlZNCvRlSKIXQAJs3V9BmpjcBQSHnmf75hUDAqAffitemahu-cMSJN-bagGiXWl8"; // Fill in your VAPID publicKey here
-        const options = { applicationServerKey: VAPIDPublicKey, userVisibleOnly: true } //Option userVisibleOnly is neccesary for Chrome
-        serviceworker.pushManager.subscribe(options).then((subscription) => {
-          //POST the generated subscription to our saving script (this needs to happen server-side, (client-side) JavaScript can't write files or databases)
-          let subscriberFormData = new FormData();
-          subscriberFormData.append("json", JSON.stringify(subscription));
-          console.log("test");
-          fetch("data/saveSubscription.php", { method: "POST", body: subscriberFormData });
-        });
-      });
-    }
-  }).catch((error) => {
-    console.log(error);
-  });
-}
 
+setTimeout(function(loading){
+  var laadscherm = document.getElementById("loader");
+  laadscherm.style.width = 0;
+  var element = document.getElementById("loadercontent");
+  element.classList.toggle("loader-open");
+  element.classList.toggle("loader-closed");
+  document.body.classList.remove("stop-scrolling"); 
+},2000)
 
 /* Menu shizzle */
 function openNav() {
@@ -43,6 +29,7 @@ function openNav() {
   element.classList.toggle("overlay-closed");
   element.classList.toggle("overlay-open");
 }
+
 /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
@@ -50,6 +37,7 @@ function closeNav() {
   element.classList.toggle("overlay-open");
   element.classList.toggle("overlay-closed");
 }
+
 /* Hamburgah */
 var intViewportHeight = window.innerHeight;
 var intWebsiteHeight = document.body.clientHeight;
@@ -77,11 +65,7 @@ $(document).ready(function () {
 
 /* Duifmeneer */
 function copy() {
-  var copyText = document.getElementById("myInput");
-  copyText.type = 'text';
-  copyText.select();
-  document.execCommand("copy");
-  copyText.type = 'hidden';
+  var henk = navigator.clipboard.writeText("verwaalrick@gmail.com");
   var tooltip = document.getElementsByClassName("copyconfirm");
   for (var i = 0, length = tooltip.length; i < length; i++) {
     tooltip[i].style.opacity = '1';

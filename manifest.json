@@ -5,25 +5,25 @@
     "background_color": "#bf037d",
     "display": "standalone",
     "Scope": "",
-    "start_url": "https://i394051.hera.fhict.nl/index.html",
+    "start_url": "https://rverwaal.nl",
     "icons": [
       {
-        "src": "main/assests/Icons/icon-72x72.png",
+        "src": "/assests/Icons/icon-72x72.png",
         "sizes": "72x72",
         "type": "image/png"
       },
       {
-        "src": "main/assests/Icons/icon-96x96.png",
+        "src": "/assests/Icons/icon-96x96.png",
         "sizes": "96x96",
         "type": "image/png"
       },
       {
-        "src": "main/assests/Icons/icon-128x128.png",
+        "src": "/assests/Icons/icon-128x128.png",
         "sizes": "128x128",
         "type": "image/png"
       },
       {
-        "src": "assests/Icons/icon-144x144.png",
+        "src": "/assests/Icons/icon-144x144.png",
         "sizes": "144x144",
         "type": "image/png"
       },

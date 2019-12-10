@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Portfolio Rick Verwaal</title>
+  <meta name="Description" content="De ziekste waanzinnigste drug die je ooit heb gehad.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name=" theme-color" content="#141626" />
+  <meta charset="UTF-8">
+  <link type="text/css" rel="stylesheet" href="css/portfolio.css" media="screen,projection" />
+  <link rel="manifest" href="manifest.json">
+  <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.9.0/d3.min.js"></script>
+  <script src="Snap.svg-0.5.1/dist/snap.svg-min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+</head>
+<style>
+</style>
+
+<body id="pp">
+  <!-- The overlay -->
+  <div id="myNav" class="overlay">
+      <!-- Button to close the overlay navigation -->
+      <div id="xd" class="overlay-closed">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+          </svg>
+        </a>
+        <div id="Tier1">
+          <h1 title="Dat is hopelijk beter voor je gezondheid.">Kijk hier maar eerst naar.</h1>
+          <a href="runmotivation.html">
+            <h2>Running Motivation</h2>
+            <h3>Design a solution which helps starting gym-goers
+              </br>with setting up routines.</h3>
+          </a>
+          <a href="smartphoneawareness.html">
+              <h2>Smartphone awareness</h2>
+              <h3>Develop an app that increases the awareness of<br> smartphone-usage from students.</h3>
+            </a>
+        </div>
+        <div class="Tier2">
+          <h1> De broodkruimels.</h1>
+          <a href="philipshueripoff.html">
+            <h2>Case Study - FitCube lichtanimatie</h2>
+            <h3 title="Fancy man">Het ontdekken van de interactie tussen licht en sporters.</h3>
+          </a>
+          <a href="weeat.html">
+              <h2>WeEat</h2>
+              <h3>Design an app which enables lonely students </br>to eat together.</h3>
+            </a>
+          <a href="flyondamuur.html">
+              <h2>Case Study - Fly on da muur</h2>
+              <h3>De stoorzender op de gang.</h3>
+          </a>
+        </div>
+        <div class="Tier2">
+          <a href="index.html">
+            <h1>Meer ik</h1>
+          </a>
+          <div class="postduif">
+            <button type="button" onclick="copy()" class="button" title="Dit kopieert mijn e-mail.">Stuur een
+              postduif.</button>
+            <span class="copyconfirm">Je hebt mijn e-mail gekopieerd. 🕊️</span>
+          </div>
+          <div class="myspace">
+            <a href="assests/piccas/CV_RickVerwaal.pdf" title="Lol het is 2019, wie heeft er nou een CV?">
+            <h2>CV</h2></a>
+            <a href="https://www.linkedin.com/in/rick-verwaal-630774194/"><svg xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" viewBox="0 0 24 24">
+                <path
+                  d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                </svg></a>
+            <a href="https://github.com/Wegenwachtpaal"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+                fill-rule="evenodd" clip-rule="evenodd">
+                <path
+                  d="M23.548 10.931l-10.479-10.478c-.302-.302-.698-.453-1.093-.453-.396 0-.791.151-1.093.453l-2.176 2.176 2.76 2.76c.642-.216 1.377-.071 1.889.44.513.515.658 1.256.435 1.9l2.66 2.66c.644-.222 1.387-.078 1.901.437.718.718.718 1.881 0 2.6-.719.719-1.883.719-2.602 0-.54-.541-.674-1.334-.4-2l-2.481-2.481v6.529c.175.087.34.202.487.348.717.717.717 1.881 0 2.601-.719.718-1.884.718-2.601 0-.719-.72-.719-1.884 0-2.601.177-.178.383-.312.602-.402v-6.589c-.219-.089-.425-.223-.602-.401-.544-.544-.676-1.343-.396-2.011l-2.721-2.721-7.185 7.185c-.302.302-.453.697-.453 1.093 0 .395.151.791.453 1.093l10.479 10.478c.302.302.697.452 1.092.452.396 0 .791-.15 1.093-.452l10.431-10.428c.302-.303.452-.699.452-1.094 0-.396-.15-.791-.452-1.093" />
+                </svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Use any element to open/show the overlay navigation menu -->
+  <div id="burger" onclick="openNav()">
+    <svg id="gek" width="33" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+      <path id="step1" d="M24,6H0V2H24Zm0,4H0v4H24Zm0,8H0v4H24Z" />
+      <path id="step2" d="M30,6H6V2H30Zm-6,4H0v4H24Zm9.67,8h-24v4h24Z" /></svg>
+  </div>
+  <section id="projectlanding" style="background-color: #ed4c67;">
+    <div id="projectimg">
+      <img src="assests/piccas/william-iven-SpVHcbuKi6E-unsplash.jpg" title="Photo by William Iven on Unsplash">
+    </div>
+  </section>
+  <section id="hs1" style="background-color: #ed4c67;">
+    <div class="container">
+      <h1>Smartphone awareness</h1>
+      <div class="opener">
+        <h2>Rol</h2>
+        <h4>UX Designer</h4>
+        </br>
+        <h2>Tijdsdruk</h2>
+        <h4>November 2019 - Januari 2020</h4>
+      </div>
+      <div class="summary">
+        <p>
+          Voor de 2e periode van Smart Mobile, kregen ik en anderen een opdracht van Herm Kisjes
+          met als doel om studenten meer bewust te maken over hun smartphone gebruik.
+          Echter moeten we dit doen met PWA technieken waardoor de opdracht al een stuk lastiger wordt.
+          <br>
+          Hierin heb ik onderzoek uitgevoerd met daaruit komend een concept en vervolgens het hoofd concept uitgewerkt en getest.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="hs2">
+    <div class="container">
+      <h1>Vooronderzoek </h1>
+      <div class="summary">
+        <h3>Hoe beïnvloed de aanwezigheid van een smartphone de productiviteit van studenten?</h3>
+        <p>Ik begon samen met een ander teamlid aan dit onderzoek met de volgende deelvragen:
+          <br><br>
+          <i>Hoe beïnvloeden smartphones concentratie tijdens het studeren?</i>
+          <br> Hierbij heb ik een "Fly on the Wall" onderzoek opgezet waarbij ik een camera voor 35 minuten
+          in een lokaal heb opgehangen en heb geturfd hoe vaak mensen op hun smartphone hebben gezeten.
+          Wat vooral opviel was dat de mensen die afgeleid raakten ook meerdere keren werden afgeleid. 
+          Oh en de recordhouder
+          was de persoon die als laatste het lokaal binnen liep. 
+          <br><br>
+          <i>Heeft de fysieke aanwezigheid van een smartphone invloed op de productiviteit? </i>
+          <br>
+          Kort antwoord: Ja. Hierbij heb ik een literatuuronderzoek aangehangen van Adrian Ward waarbij hij en zijn team
+          een aantal hersenonderzoeken deed bij studenten met als verschil dat per persoon de smartphone zich op een andere plek bevond:
+          Op tafel, broekzak / tas of in een andere kamer. 
+        </p>
+      </div>
+      <div class="sideimg">
+        <figure>
+          <img src="assests/piccas/FlyWall_22-11.jpg">
+          <figcaption>
+            Dit zijn de resultaten van de Fly on the Wall.
+            <br>× Zijn de studenten die hun telefoon op tafel hadden liggen. 
+            <br>* Kwam later het lokaal binnen.
+          </figcaption>
+        </figure>
+      </div>
+  </section>
+<section id="footer">
+    <div class="container">
+      <h1>De grote spiegel</h1>
+      <div class="summary">
+        <p>
+        </p>
+      </div>
+      <h2 id="meuk">Overige projecten.</h2>
+      <div class="otherprojects">
+        <a href="runmotivation.html">
+          <h2>Running Motivation</h2>
+          <h3>Design a solution which helps starting gym-goers
+            </br>with setting up routines.</h3>
+        </a>
+        <a href="philipshueripoff.html">
+          <h2>Case Study - FitCube lichtanimatie</h2>
+          <h3 title="Fancy man">Het ontdekken van de interactie tussen licht en sporters. (Work in Progress)
+          </h3>
+        </a>
+      </div>
+      <div id="contact">
+        <div class="postduif">
+          <button type="button" onclick="copy()" class="button" title="Dit kopieert mijn e-mail.">Stuur een
+            postduif.</button>
+          <span class="copyconfirm">Je hebt mijn e-mail gekopieerd. 🕊️</span>
+        </div>
+        <div class="myspace">
+          <a href="assests/piccas/CV_RickVerwaal.pdf" title="Lol het is 2019, wie heeft er nou een CV?">
+            <h2>CV</h2>
+          </a>
+          <a href="https://www.linkedin.com/in/rick-verwaal-630774194/"><svg xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" viewBox="0 0 24 24">
+              <path
+                d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+            </svg></a>
+          <a href="https://github.com/Wegenwachtpaal"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd" clip-rule="evenodd">
+              <path
+                d="M23.548 10.931l-10.479-10.478c-.302-.302-.698-.453-1.093-.453-.396 0-.791.151-1.093.453l-2.176 2.176 2.76 2.76c.642-.216 1.377-.071 1.889.44.513.515.658 1.256.435 1.9l2.66 2.66c.644-.222 1.387-.078 1.901.437.718.718.718 1.881 0 2.6-.719.719-1.883.719-2.602 0-.54-.541-.674-1.334-.4-2l-2.481-2.481v6.529c.175.087.34.202.487.348.717.717.717 1.881 0 2.601-.719.718-1.884.718-2.601 0-.719-.72-.719-1.884 0-2.601.177-.178.383-.312.602-.402v-6.589c-.219-.089-.425-.223-.602-.401-.544-.544-.676-1.343-.396-2.011l-2.721-2.721-7.185 7.185c-.302.302-.453.697-.453 1.093 0 .395.151.791.453 1.093l10.479 10.478c.302.302.697.452 1.092.452.396 0 .791-.15 1.093-.452l10.431-10.428c.302-.303.452-.699.452-1.094 0-.396-.15-.791-.452-1.093" />
+            </svg></a>
+        </div>
+      </div>
+</section>
+</body>
+<script src="scripts/scripts.js">
+</script>
+
+</html>

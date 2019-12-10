@@ -1,6 +1,7 @@
-$(function pipa() {
-    $.getJSON("http://localhost:1337/restaurants", function (json) {
-        console.log("succes", json);                               
-        document.getElementById("dump").innerHTML = shamwow;
-    });
-});
+setTimeout(function(loading){
+    var laadscherm = document.getElementById("loader");
+    laadscherm.style.width = 0;
+    var element = document.getElementById("loadercontent");
+    element.classList.toggle("loader-open");
+    element.classList.toggle("loader-closed");
+},4000)
